@@ -130,9 +130,7 @@
 				const tr = $(this).closest("tr");
 				
 				$.ajax(url + "/" + userid, {
-					method : 'DELETE',
-					data : "json",
-					contentType : "application/json"
+					method : 'DELETE'
 				})
 				
 				.done(function() {
