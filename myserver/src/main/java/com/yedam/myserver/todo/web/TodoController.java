@@ -12,7 +12,6 @@ import com.yedam.myserver.todo.mapper.TodoMapper;
 import com.yedam.myserver.todo.vo.TodoVO;
 
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5500", maxAge = 3600)
 public class TodoController {
 
 	@Autowired TodoMapper mapper;
@@ -33,6 +32,7 @@ public class TodoController {
 		 mapper.merge(vo);
 		 return vo;
 	}	
+	
 	@GetMapping("/todoDelete")
 	public TodoVO todoDelete(TodoVO vo) {
 		 mapper.remove(vo);

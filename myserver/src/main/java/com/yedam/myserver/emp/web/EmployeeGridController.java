@@ -41,7 +41,7 @@ public class EmployeeGridController {
 	@PostMapping("/modifyEmp")
 	public Map<String, Object> modifyEmp(@RequestBody ModifyData<Employee> data) {
 		
-		if (data.getCreatedRows() != null) {
+		if (data.getCreatedRows() != null) { 
 			for ( Employee emp : data.getCreatedRows()) {
 				mapper.persist(emp);
 			}
