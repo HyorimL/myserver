@@ -8,6 +8,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Employee {
 
+	public Employee() {}
+	
+	public Employee(String first_name) {
+	      super();
+	      this.first_name = first_name;
+	   }
+	
 	private Integer department_id;
 	private Integer manager_id;
 	@JsonProperty(value = "pct")
@@ -23,6 +30,11 @@ public class Employee {
 	private String first_name;
 	private Integer employee_id;
 	private String department_name;
+	
+	@Override
+	public String toString() {
+		return "Employee [first_name=" + first_name + "]";
+	}
 	
 	public Integer getDepartment_id() {
 		return department_id;
