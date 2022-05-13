@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="deptList" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8f59580b-fff4-4627-8dee-0129bb7ece24">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="hr"/>
+	<queryString language="SQL">
+		<![CDATA[select * 
+from departments]]>
+	</queryString>
+	<field name="DEPARTMENT_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="DEPARTMENT_ID"/>
+	</field>
+	<field name="DEPARTMENT_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DEPARTMENT_NAME"/>
+	</field>
+	<field name="MANAGER_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="MANAGER_ID"/>
+	</field>
+	<field name="LOCATION_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="LOCATION_ID"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="24" width="100" height="30" uuid="243afb3c-858e-40a9-992f-46148230591a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[dept list]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="1" y="10" width="141" height="30" uuid="eac6fcb6-ed52-48dd-853e-67dc3744abda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[부서번호]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="10" width="141" height="30" uuid="f8e447b8-a46f-4f06-b25d-2de39457a23b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[부서이름]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="10" width="135" height="30" uuid="78acf195-0756-47a8-8e7b-38fb269010d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[매니저번호]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="10" width="141" height="30" uuid="c7821b73-aa35-47eb-886a-34b68ae9dbf7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[지역번호]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="82" splitType="Stretch">
+			<textField>
+				<reportElement x="-2" y="10" width="141" height="30" uuid="12c707bd-3f82-4a51-a3d7-a028f99bf15a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPARTMENT_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="10" width="138" height="30" uuid="2d669f35-8170-49f8-9bd9-9b655bdb5d84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPARTMENT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="10" width="138" height="30" uuid="3e118143-47cf-4401-9588-bb60baf54849"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MANAGER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="10" width="138" height="30" uuid="d410afa4-d0f7-4898-9fc6-39c619a695a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOCATION_ID}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="50" width="555" height="1" uuid="90f1727d-f6d6-42ed-85ec-947c5d7f5965"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
